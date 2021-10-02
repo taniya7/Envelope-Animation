@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;   
+  }
+  
+  body {
+    height: 100vh;
+    width: 100%;
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(55deg, #eee, #FF5733  );   
+  }
+  
+  #container {        
+    width: 500px;
+    height: 400px;
+    padding-top: 250px;
+    perspective: 1000px;          
+  }
+  
+  #full-envelope {
+    position: relative;   
+    transition: transform 1s;
+    transform-style: preserve-3d;    
+  }
+  
+  #envelope-front,  #envelope-back {
+    position: absolute;
+    display: flex;
+    width: 500px;
+    height: 400px;    
+    backface-visibility: hidden;     
+  }  
+  
+  #envelope-back {    
+    background-color: #181818;
+    transform: rotateY(180deg);   
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+  }
+  
+  #lid {
+    position: absolute;
+    height: 0;
+    width: 0;   
+    border-right: 250px solid transparent;
+    border-bottom: 200px solid transparent;
+    border-left: 250px solid transparent;
+    transform-origin: top;
+    border-top: 200px solid #181818;
+    transform: rotateX(0deg);
+    z-index: 3; 
+  }
+
+  #envelope {
+    position: absolute;
+    height: 0;
+    width: 0;       
+    border-top: 200px solid transparent;
+    border-right: 250px solid #202020;
+    border-left: 250px solid #202020;
+    border-bottom: 200px solid #282828;  
+    z-index: 4; 
+  }  
+
+  #card {
+    position: absolute;
+    top: 2px;            
+  }  
+   
+  
+  
+ 
+  
+ 
+
+  
